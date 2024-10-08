@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.notebook-container {
+    background-color: white; /* White background for the notebook */
+    padding: 20px; /* Space inside the rectangle */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 800px; /* Maximum width of the notebook */
+    width: 90%; /* Responsive width */
+    overflow: auto; /* Allows scrolling if content overflows */
+}
+
+zero-md {
+    margin: 0; /* Remove default margin */
+}
+
+
+.markdown-body {
+    background-color: white !important; /* Set the background to white */
+    color: black !important; /* Set the text color to black */
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    color: #333; /* Dark color for headings */
+}
+
+.markdown p,
+.markdown li {
+    color: #555; /* Darker text for paragraphs and list items */
+}

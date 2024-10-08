@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white; /* Background color of the rectangle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    background: #f9f9f9; /* Light background for project cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 0 10px; /* Space between cards */
+}
+.project-image {
+    width: 100%; /* Makes the image fill the width of the card */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Rounds the corners of the image */
+    margin-bottom: 10px; /* Space between the image and title */
+}
+
+.project h2 {
+    color: #007bff;
+}
+
+.project p {
+    color: #555;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.project a:hover {
+    background: #0056b3;
+}
