@@ -2,6 +2,27 @@
 
 <html lang="en">
 <head><meta charset="utf-8"/>
+
+<style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height of the viewport */
+            margin: 0;
+            background-color: #f0f0f0; /* Optional: background color */
+        }
+        .container {
+            width: 80%; /* Width of the rectangle */
+            max-width: 800px; /* Maximum width */
+            background-color: white; /* Background color of the rectangle */
+            border: 1px solid #ccc; /* Border color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding inside the rectangle */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+        }
+    </style>
+
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>boston_eda</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
@@ -7508,7 +7529,9 @@ a.anchor-link {
   }
 </style>
 <!-- End of mermaid configuration --></head>
+
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+  <div class="container">
 <main>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -7516,7 +7539,6 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Restarted Python</p>
 </div>
 </div>
 </div>
@@ -7549,11 +7571,6 @@ a.anchor-link {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/Users/manuel/workspace/tryo/onboarding-manu/.venv/lib/python3.10/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from .autonotebook import tqdm as notebook_tqdm
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -8443,7 +8460,7 @@ Otra cosa a ver es como aumenta significativamente <code>CRIM</code> a medida qu
 La última tendencia que puedo notar es el aumento del valor de la casa (<code>MEDV</code>) a medida que aumentan la cantidad de cuartos <code>RM</code>, lo cual tiene sentido y creo no amerita mayor explicación.</p>
 <p>Con todo esto, parece que tenemos bastante insight para poder empezar a modelar.
 Empecemos con una regresión lineal, siendo que las variables parecen ser bastante lineales y esto un problema de regresión,
-usando <strong>MAE</strong> y <strong>RSME</strong> como métricas. Luego, probaremos con otro modelo, para ver que podemos lograr.</p>
+usando <strong>MAE</strong> como métrica. Luego, probaremos con otro modelo, para ver que podemos lograr.</p>
 </div>
 </div>
 </div>
@@ -8516,18 +8533,8 @@ usando <strong>MAE</strong> y <strong>RSME</strong> como métricas. Luego, proba
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># Podemos ver que el modelo performó bastante bien, con 3 mil dolares de error promedio, lo cual puede ser bastante</span>
-<span class="c1"># más o menos significativo, dependiendo de la casa. Siendo que la mayoria de los precios se ubican en el entorno de los 20 y 25 mil dolares,</span>
-<span class="c1"># hablamos de poco más de un 10% de error en el valor del hogar. Así, podemos ver que haciendo un correcto</span>
-<span class="c1"># tratado de los datos y análisi de estos podemos conseguir un modelo bastante robusto para la predicción,</span>
-<span class="c1"># aun siendo a partir de un modelo simple como es la regresión lineal.</span>
-<span class="c1">#</span>
-<span class="c1"># Para terminar, probemos un modelo más complejo y potente, como lo es `XGBoost`, y comparar resultados.</span>
-<span class="c1"># Además, se le añadió optimización de parametros a través de optuna, para ver qué tanto puede, o no, mejorar.</span>
-</pre></div>
-</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown"> Podemos ver que el modelo performó bastante bien, con 3 mil dolares de error promedio, lo cual puede ser bastante más o menos significativo, dependiendo de la casa. Siendo que la mayoria de los precios se ubican en el entorno de los 20 y 25 mil dolares, hablamos de poco más de un 10% de error en el valor del hogar. Así, podemos ver que haciendo un correcto tratado de los datos y análisi de estos podemos conseguir un modelo bastante robusto para la predicción, aun siendo a partir de un modelo simple como es la regresión lineal. 
+Para terminar, probemos un modelo más complejo y potente, como lo es `XGBoost`, y comparar resultados. Además, se le añadió optimización de parametros a través de optuna, para ver qué tanto puede, o no, mejorar.
 </div>
 </div>
 </div>
@@ -8651,5 +8658,6 @@ Hablamos de en promedio, un aproximado de 20% de mejora, lo cual es significativ
 </div>
 </div>
 </main>
+</div>
 </body>
 </html>
